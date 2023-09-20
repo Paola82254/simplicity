@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:wght@700;800&display=swap');
 
-*{box sizing: border-box;}
+*{box-sizing: border-box;}
 
 :root {
     /* variáveis para a paleta de cores do site */
@@ -11,3 +11,8 @@
     --cor-intermediaria: #ececec;
 }
 html{font-size: 16px;}
+body{
+    color:var(--cor-texto);
+    font-family: 'Noto Sans', sans-serif;
+    background-color: var(--cor-clara );
+}
