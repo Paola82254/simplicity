@@ -68,6 +68,14 @@ nav h2 a:hover, nav h2 a:focus
 -flex com centralização total
 -altura de 50px
 */
+
+/* regra da lista ul de links */
+.menu{
+    list-style:none;
+/* ATENÇÃO! Usamos o display none para não exibir inicialmente a lista de links. */
+display: none;
+
+}
 .menu a {
 font-style:var(--cor-escura);
 display: flex;
@@ -77,6 +85,16 @@ font-weight: bold;
 height: 50px;
 background-color: yellowgreen;
 border: solid 1px;
+}
+
+.menu.aberto {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-clara);
+
+    position: absolute;
+    left:0;
+    right: 0;
 }
 
 
