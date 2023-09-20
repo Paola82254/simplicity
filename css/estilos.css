@@ -86,15 +86,20 @@ height: 50px;
 background-color: yellowgreen;
 border: solid 1px;
 }
-
+/* Seletor de Classes combinadas
+Esta regra somente irá funcionar quando AS DUAS CLASSES estiverem aplicadas JUNTAS no elemento HTML (no caso, na lista de (menu/links). 
+OBS: Esta combinação será possível por meio de manipulação programada com JavaScript*/
 .menu.aberto {
+    /* O Flex fará a lista de links aparecer*/
     display: flex;
+    /*  O Flex fará a lista de links aparecer em forma de coluna (vertical)*/
     flex-direction: column;
-    background-color: var(--cor-clara);
-
+/* Usamos as propriedades de posicionamento e coordenadas para garantir o encaixe correto (abaixo do título e da palavra Menu). */
     position: absolute;
     left:0;
     right: 0;
+/* Aplicamos um fundo à lista evitando a dificuldade de leirura dos links */
+    background-color: var(--cor-clara);
 }
 
 
