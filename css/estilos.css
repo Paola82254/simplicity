@@ -126,10 +126,11 @@ Flex com alinhamento totalmente centralizado, e um elemento em cima do outro (ou
     background-attachment: fixed;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
-.destaque h2,p{
+.destaque h2,.destque p{
     color: var(--cor-clara);
     text-align: center
 ;
