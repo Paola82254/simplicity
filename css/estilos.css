@@ -160,4 +160,28 @@ Flex com alinhamento totalmente centralizado, e um elemento em cima do outro (ou
 
 }
 
+article h2 {
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: Raleway, sans-serif;
+    color: var(--cor-titulo);
+}
+
+.fornt-end, .historia, .localizacao {
+    text-align: center;
+}
+
+article p{
+    padding: 0.5rem 0;
+    font-size: 1.2rem
+}
+
+abbr {
+    text-decoration: none;
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    padding: 0 2px;
+    border-radius: 4px;
+}
+address {font-style: normal;}
 
