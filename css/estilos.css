@@ -42,6 +42,7 @@ header {
     display:flex;
     align-items: center;
     justify-content:space-between;
+    height: 15vh;
 }
 
 /* Formatação da Palavra Menu */
@@ -121,7 +122,7 @@ Flex com alinhamento totalmente centralizado, e um elemento em cima do outro (ou
 */
 
 .destaque {
-    height: 500px;
+    height: 85vh;
     background-image:url(../imagens/fundo-destaque.jpg);
     background-attachment: fixed;
     display: flex;
@@ -130,7 +131,7 @@ Flex com alinhamento totalmente centralizado, e um elemento em cima do outro (ou
     flex-direction: column;
 }
 
-.destaque h2,.destque p{
+.destaque h2,.destaque p{
     color: var(--cor-clara);
     text-align: center
 ;
