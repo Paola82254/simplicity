@@ -42,11 +42,14 @@ header .limitador {
     align-items: center;
     justify-content:space-between;
     height: 15vh;
+
 }
 
 header {
     position: sticky;
     top: 0;
+    /* z-index com valor alto garante que o cabeçalho passará por cimade todos os conteúdos da página e nenhum deles sobreponha o cabeçalho */
+    z-index: 100;
     background-color: var(--cor-clara)
 }
 
@@ -89,8 +92,8 @@ justify-content: center;
 align-items: center;
 font-weight: bold;
 height: 50px;
-background-color: yellowgreen;
-border: solid 1px;
+/* background-color: yellowgreen;
+border: solid 1px; */
 }
 /* Seletor de Classes combinadas
 Esta regra somente irá funcionar quando AS DUAS CLASSES estiverem aplicadas JUNTAS no elemento HTML (no caso, na lista de (menu/links). 
@@ -326,7 +329,16 @@ tr:nth-child(odd) {
     .front-end img{ height: 150px;}
 }
 
- 
+ /* pseudo-elemento ::before (::after) */
+td:last-child {position: relative;}
+td:last-child::before {
+    content: "R$";
+    position: absolute;
+    left: 10px;
+}
+
+.conteudo h2::before {content:"🎁"}
+
  
 
 /* 2) Crie uma regra condicional para telas a partir de 900px com  as seguintes alterações:
@@ -343,4 +355,30 @@ tr:nth-child(odd) {
 
 html {
     font-size: 18px;
+}
+
+.imagensdeservico{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagensdeservico img {
+    border-radius: 100%;
+    transform: scale(0.9);
+    transition: 500ms;
+    filter: blur(0.9px) brightness(89%);
+}
+
+/* Aplicamos o :hover o o :focus no seletor de tag "a", ao invés de aplicar no "img". Desta forma, o acionamento funcionará tanto com o mouse quando com o teclado */
+.imagensdeservico a:hover img, .imagensdeservico a:focus img{
+    transform: scale(1);
+    border-radius: 10%;
+    filter: blur(0);
+}
+
+@media screen and (min-width:100px){
+    .imagensdeservico{
+    display: flex;
+    flex-wrap: wrap;
+    }
 }
