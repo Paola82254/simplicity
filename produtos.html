@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos - Simplicity</title>
+    <!-- CSS Externo -->
     <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- CSS Interno: No caso de conflito, as regras criadas aqui SEMPRE irão prevalecer -->
+    <style>
+        .conteudo h2::before {content:🛒; }
+    </style>
 </head>
 <body>
     <header>
