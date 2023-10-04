@@ -314,7 +314,6 @@ tr:nth-child(odd) {
 form {
     max-width: 500px;
     margin: auto;
-    background-color: lightgreen;
 }
 
 input, select, textarea {
@@ -335,6 +334,18 @@ form div {
     margin-top: 1rem;
 }
 
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: 20%;
+}
+
+/* Pseudo-classe :not() 
+Permite criar exceções para uma regra.
+Neste exempo, estamos aplicando 70% de largura para tudo (*), dentro do "form div" EXCETO o "label". */
+form div *:not(label) {
+    width: 70%;
+}
 
 /* 1) Crie uma regra condicional para telas a partir de 570px com as seguintes alterações:
 
