@@ -310,6 +310,32 @@ tr:nth-child(odd) {
     background-color: var(--cor-clara);
 }
 
+/* Regras para formulário */
+form {
+    max-width: 500px;
+    margin: auto;
+    background-color: lightgreen;
+}
+
+input, select, textarea {
+    border: none;
+    padding: 4px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+textarea {
+    height: auto;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
 /* 1) Crie uma regra condicional para telas a partir de 570px com as seguintes alterações:
 
  
