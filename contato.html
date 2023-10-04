@@ -52,11 +52,24 @@
         </div>
 
             <!-- assunto -->
-
-
+            <div>
+            <label for="assunto">Assunto:</label>
+            <select name="assunto" id="assunto">
+                <!-- Deixe um option vazio de propósito para que duvidas nao apareça by default -->
+                <option value=""></option>
+                <option value="">Dúvidas</option>
+                <option value="">Elogios</option>
+                <option value="">Reclamações</option>
+                <option value="">Outros</option>
+            </select>
+        </div>
             <!-- mensagem -->
-
+            <div>
+                <label for="mensagem">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+            </div>
         
+            <button type="submit">Enviar dados</button>
 
             </article>
     </main>
