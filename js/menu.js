@@ -14,4 +14,10 @@ const textoBotao = botaoMenu.querySelector("a");
 
 /* Console logs comentados pq foram usados apenas para teste */
 
+botaoMenu.addEventListener("click", function(event){
+// Anular/Prevenir o comportamento do link
+    event.preventDefault();
+    menu.classList.toggle("aberto");
+})
+
 
