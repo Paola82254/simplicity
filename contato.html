@@ -1,81 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - Simplicity</title>
-    
+
     <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
     <header>
         <div class="limitador">
-        <h1><a href="index.html">Simplicity</a></h1>
-        <nav>
-            <h2><a href="">Menu &equiv;</a></h2>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </div>
+            <h1><a href="index.html">Simplicity</a></h1>
+            <nav>
+                <h2><a href="">Menu &equiv;</a></h2>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <article class="limitador conteudo">
             <h2>Contato</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, velit corporis? Voluptate et magnam quis esse iste, exercitationem facilis a sint doloremque dolor obcaecati! Laboriosam aspernatur enim fuga officiis, numquam recusandae ipsum! Iusto quidem praesentium maxime. Eius tempora nesciunt excepturi alias sunt, ipsa recusandae ratione debitis, deleniti maxime sit nisi. Deleniti sint maxime quas eius voluptatem aliquam doloremque blanditiis dolorem, similique voluptate nihil tempora incidunt alias, molestias eligendi veritatis. Vitae qui recusandae dolor tempore itaque eaque quia, odit hic, perferendis voluptatem aliquam. Animi iure voluptas beatae. Alias placeat voluptas veniam odio asperiores expedita possimus sequi, iusto molestiae facilis, distinctio beatae.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae, velit corporis? Voluptate et magnam
+                quis esse iste, exercitationem facilis a sint doloremque dolor obcaecati! Laboriosam aspernatur enim
+                fuga officiis, numquam recusandae ipsum! Iusto quidem praesentium maxime. Eius tempora nesciunt
+                excepturi alias sunt, ipsa recusandae ratione debitis, deleniti maxime sit nisi. Deleniti sint maxime
+                quas eius voluptatem aliquam doloremque blanditiis dolorem, similique voluptate nihil tempora incidunt
+                alias, molestias eligendi veritatis. Vitae qui recusandae dolor tempore itaque eaque quia, odit hic,
+                perferendis voluptatem aliquam. Animi iure voluptas beatae. Alias placeat voluptas veniam odio
+                asperiores expedita possimus sequi, iusto molestiae facilis, distinctio beatae.</p>
 
             <form action="" method="post" autocomplete="off">
-           
-            <!-- nome -->
-            <div>
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome" required placeholder="Digite nome completo">
-            </div>
-        
-            <div>
-            <!-- e-mail -->
-            <label for="email">E-mail:</label>
-            <input type="email" name="email" id="email" required>
-        </div>
-            <div>
-            <!-- data de nascimento -->
-            <label for="nascimento">Data de nascimento:</label>
-            <input type="date" name="nascimento" id="nascimento">
-        </div>
-            <div>
-            <!-- Telefone -->
-            <label for="telefone">Telefone:</label>
-            <input type="tel" name="telefone" id="telefone">
-        </div>
 
-            <!-- assunto -->
-            <div>
-            <label for="assunto">Assunto:</label>
-            <select name="assunto" id="assunto" required>
-                <!-- Deixe um option vazio de propósito para que duvidas nao apareça by default -->
-                <option value=""></option>
-                <option value="">Dúvidas</option>
-                <option value="">Elogios</option>
-                <option value="">Reclamações</option>
-                <option value="">Outros</option>
-            </select>
-        </div>
-            <!-- mensagem -->
-            <div>
-                <label for="mensagem">Mensagem:</label>
-                <textarea required name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
-            </div>
-        
-            <button type="submit">Enviar dados</button>
-        </form>
-            </article>
+                <!-- nome -->
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" required placeholder="Digite nome completo">
+                </div>
+
+                <div>
+                    <!-- e-mail -->
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div>
+                    <!-- data de nascimento -->
+                    <label for="nascimento">Data de nascimento:</label>
+                    <input type="date" name="nascimento" id="nascimento">
+                </div>
+
+                <!-- INÍCIO HTML PARA CEP/ENDEREÇO -->
+                <div>
+                    <label for="cep">CEP: <br><span id="status"></span></label>
+                    <div id="area-do-cep">
+                        <input placeholder="Somente números" type="text" id="cep" name="cep" maxlength="8"
+                            inputmode="numeric" required> <br>
+                        <button id="buscar">Buscar</button>
+                    </div>
+                </div>
+                <div>
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" size="30">
+                </div>
+                <div>
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro">
+                </div>
+                <div>
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade">
+                </div>
+                <div>
+                    <label for="estado">Estado:</label>
+                    <input type="text" id="estado" name="estado">
+                </div>
+                <!-- /FIM HTML PARA CEP/ENDEREÇO -->
+
+
+                <div>
+                    <!-- Telefone -->
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" name="telefone" id="telefone">
+                </div>
+
+                <!-- assunto -->
+                <div>
+                    <label for="assunto">Assunto:</label>
+                    <select name="assunto" id="assunto" required>
+                        <!-- Deixe um option vazio de propósito para que duvidas nao apareça by default -->
+                        <option value=""></option>
+                        <option value="">Dúvidas</option>
+                        <option value="">Elogios</option>
+                        <option value="">Reclamações</option>
+                        <option value="">Outros</option>
+                    </select>
+                </div>
+                <!-- mensagem -->
+                <div>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea required name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                </div>
+
+                <button type="submit">Enviar dados</button>
+            </form>
+        </article>
     </main>
     <footer>
-        <p>Simplicity é um site fictício desenvolvido para fins educacionais &copy; <b>Senac Penha</b> - <time>2023</time>   </p>
+        <p>Simplicity é um site fictício desenvolvido para fins educacionais &copy; <b>Senac Penha</b> -
+            <time>2023</time> </p>
     </footer>
     <script src="js/menu.js"></script>
 </body>
+
 </html>

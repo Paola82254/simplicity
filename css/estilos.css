@@ -364,6 +364,17 @@ button:hover, button:focus {
     box-shadow: var(--cor-escura) 0 0 2px;
 }
 
+
+#cep {width: 60%; }
+#buscar {
+width: 39%;
+padding: 12px;
+
+}
+
+
+
+
 /* 1) Crie uma regra condicional para telas a partir de 570px com as seguintes alterações:
 
  
