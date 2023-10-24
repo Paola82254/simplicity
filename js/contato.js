@@ -39,4 +39,10 @@ botaoBuscar.addEventListener("click", async function(event){
 
     console.log(resposta);
 
+    //Etapa 3: Extrair os dados da resposta em formato JSON
+
+    const dados = await resposta.json();
+
+    console.log(dados);
+
 });
