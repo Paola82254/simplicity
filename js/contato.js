@@ -15,8 +15,9 @@ const campoTelefone = formulario.querySelector("#telefone");
 //Seleção do campo telefone usando JQuery
 //const campoTelefone = $("#telefone");
 
-//Ativando a máscara para o telefone
+//Ativando a máscara para o telefone e cep
 $(campoTelefone).mask("(00) 0000-0000"); //Exemplo: (11) 2135-0300
+$(campoCep).mask ("00000-000"); // Exemplo: 03639-000
 
 
 // Detectando o evento de click no botão Buscar
