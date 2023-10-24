@@ -372,7 +372,7 @@ padding: 12px;
 
 }
 
-
+#status { font-size: 12px; }
 
 
 /* 1) Crie uma regra condicional para telas a partir de 570px com as seguintes alterações:

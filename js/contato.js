@@ -23,7 +23,12 @@ botaoBuscar.addEventListener("click", async function(event){
     //Alerte o usuário sobre o erro de digitação
     mensagem.textContent = "Digite um CEP válido!";
     mensagem.style.color = "purple";
-    mensagem.style.fontSize = "12px";
+    
+
+    //PARE A EXECUÇÃO
+    return;
+
+
     } else {
         //Caso contrário (ou seja, tem 8 dígitos), guarde o valor
         cep = campoCep.value;
@@ -45,4 +50,18 @@ botaoBuscar.addEventListener("click", async function(event){
 
     console.log(dados);
 
+    //Etapa 4: lidar com os dados de resposta (em caso de erro ou sucesso)
+    if( "erro" in dados){
+        mensagem.textContent = "CEP inexistente!";
+        mensagem.style.color = "red";
+        
+    } else {
+        mensagem.textContent = "CEP encontrado!";
+        mensagem.style.color = "blue";
+        campoEndereço.value = dados.logradouro;
+        campoBairro.value = dados.bairro;
+        campoCidade.value = dados.localidade;
+        campoCidade.value = dados.uf;
+         
+    }
 });
