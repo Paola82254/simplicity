@@ -9,6 +9,15 @@ const campoEstado = formulario.querySelector("#estado");
 const botaoBuscar = formulario.querySelector("#buscar");
 const mensagem = formulario.querySelector("#status");
 
+//Seleção do campo telefone usando JS PURO
+const campoTelefone = formulario.querySelector("#telefone");
+
+//Seleção do campo telefone usando JQuery
+//const campoTelefone = $("#telefone");
+
+//Ativando a máscara para o telefone
+$(campoTelefone).mask("(00) 0000-0000"); //Exemplo: (11) 2135-0300
+
 
 // Detectando o evento de click no botão Buscar
 
@@ -58,6 +67,9 @@ botaoBuscar.addEventListener("click", async function(event){
     } else {
         mensagem.textContent = "CEP encontrado!";
         mensagem.style.color = "blue";
+
+        const exemplos = document.querySelectorAll(".exemplo");
+
         campoEndereço.value = dados.logradouro;
         campoBairro.value = dados.bairro;
         campoCidade.value = dados.localidade;
