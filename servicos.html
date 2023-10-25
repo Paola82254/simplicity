@@ -31,10 +31,10 @@
             <p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, in culpa obcaecati doloremque reprehenderit voluptate sapiente? Sint excepturi enim, repellendus voluptates fuga necessitatibus ab commodi, alias ea vero sequi. Magnam.</span><span>Debitis itaque provident quis facere, dolor voluptatibus harum. Eos consectetur ducimus porro necessitatibus id dolorum reprehenderit quod, inventore voluptates soluta saepe quia odit quam suscipit unde minus vitae animi quas!</span></p>
 
             <figure class="imagensdeservico">
-                <a data-lightbox="fotos" href="imagens/desenvolvimento-web.jpg"><img src="imagens/desenvolvimento-web-mini.jpg" alt="imagem de web design"></a>
-                <a data-lightbox="fotos" href="imagens/design-grafico.jpg"><img  src="imagens/design-grafico-mini.jpg" alt="imagem de editor de fotos"></a>
-                <a data-lightbox="fotos" href="imagens/marketing-digital.jpg"><img src="imagens/marketing-digital-mini.jpg" alt="imagem de um auto-falante"></a>
-                <a data-lightbox="fotos" href="imagens/consultoria-treinamento.jpg"><img src="imagens/consultoria-treinamento-mini.jpg" alt="imagem de uma equipe (5 pessoas tendo uma ideia)"></a>
+                <a data-title="Desenvolvimento de sites" data-lightbox="fotos" href="imagens/desenvolvimento-web.jpg"><img src="imagens/desenvolvimento-web-mini.jpg" alt="imagem de web design"></a>
+                <a data-title="Design gráfico impactante" data-lightbox="fotos" href="imagens/design-grafico.jpg"><img  src="imagens/design-grafico-mini.jpg" alt="imagem de editor de fotos"></a>
+                <a data-title="Venda e convença" data-lightbox="fotos" href="imagens/marketing-digital.jpg"><img src="imagens/marketing-digital-mini.jpg" alt="imagem de um auto-falante"></a>
+                <a data-title="Prepare-se para o mercado" data-lightbox="fotos" href="imagens/consultoria-treinamento.jpg"><img src="imagens/consultoria-treinamento-mini.jpg" alt="imagem de uma equipe (5 pessoas tendo uma ideia)"></a>
             </figure>
 
 
@@ -53,7 +53,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- Importação do JS do plugin/extensão LIGHTBOX -->
-    <script src="lightbox/js/lightbox.min.js"></script>    
+    <script src="lightbox/js/lightbox.min.js"></script> 
+    
+    <script>
+    lightbox.option({
+        albumLabel: "Foto %1 de %2"
+    })
+    </script>
+    
     <script src="js/menu.js"></script>
 </body>
 </html>
