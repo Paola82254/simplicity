@@ -2,7 +2,7 @@
 /* Selecionando os elementos que serão manipulados */
 const formulario = document.querySelector("form");
 const campoCep = formulario.querySelector("#cep");
-const campoEndereço = formulario.querySelector("#endereco");
+const campoEndereco = formulario.querySelector("#endereco");
 const campoBairro = formulario.querySelector("#bairro");
 const campoCidade = formulario.querySelector("#cidade");
 const campoEstado = formulario.querySelector("#estado");
@@ -29,7 +29,7 @@ botaoBuscar.addEventListener("click", async function(event){
 
     let cep; // undefined
 
-    if(campoCep.value.length !== 8){
+    if(campoCep.value.length !== 9){
     //Alerte o usuário sobre o erro de digitação
     mensagem.textContent = "Digite um CEP válido!";
     mensagem.style.color = "purple";
@@ -69,12 +69,12 @@ botaoBuscar.addEventListener("click", async function(event){
         mensagem.textContent = "CEP encontrado!";
         mensagem.style.color = "blue";
 
-        const exemplos = document.querySelectorAll(".exemplo");
+        //const exemplos = document.querySelectorAll(".exemplo");
 
-        campoEndereço.value = dados.logradouro;
+        campoEndereco.value = dados.logradouro;
         campoBairro.value = dados.bairro;
         campoCidade.value = dados.localidade;
-        campoCidade.value = dados.uf;
+        campoEstado.value = dados.uf;
          
     }
 });
